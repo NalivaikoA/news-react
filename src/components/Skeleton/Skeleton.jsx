@@ -2,7 +2,6 @@ import styles from "./styles.module.css"
 
 
 export const Skeleton = ({count = 1, type="banner"}) => {
-  console.log(new Date());
   
   return (
     <>

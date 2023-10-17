@@ -3,7 +3,6 @@ import styles from "./styles.module.css"
 
 
 export const Header = () => {
-  console.log(new Date());
   
   return (
     <header className={styles.header}> 
