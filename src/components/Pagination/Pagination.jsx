@@ -30,7 +30,11 @@ export const Pagination = ({
           );
         })}
       </div>
-      <button onClick={handleNextPage} disabled={currentPage >= totalPages} className={styles.arrow}>
+      <button
+        onClick={handleNextPage}
+        disabled={currentPage >= totalPages}
+        className={styles.arrow}
+      >
         {">"}
       </button>
     </div>
