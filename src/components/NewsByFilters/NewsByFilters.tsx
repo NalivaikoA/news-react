@@ -1,5 +1,6 @@
 import { getNews } from "../../api/apiNews";
 import { PAGE_SIZE, TOTAL_PAGES } from "../../constants/constants";
+import { useTheme } from "../../context/ThemeContext";
 import { useDebounce } from "../../helpers/hooks/useDebounce";
 import { useFetch } from "../../helpers/hooks/useFetch";
 import { useFilters } from "../../helpers/hooks/useFilters";
@@ -10,6 +11,8 @@ import { PaginationWrapper } from "../PaginationWrapper/PaginationWrapper";
 import styles from "./styles.module.css";
 
 export const NewsByFilters = () => {
+  const { isDark } = useTheme();
+
   const { filters, changeFilter } = useFilters({
     page_number: 1,
     page_size: PAGE_SIZE,
